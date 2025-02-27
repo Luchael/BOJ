@@ -20,12 +20,17 @@ def solution():
             else:
                 ExactCover[y][x][sudoku[y][x]] = True
     print(ExactCover)
-    
-    
     return sudoku
 
 def check(y, x):
     return [v for v in range(SIZE) if v not in sudoku[y] and v not in [sudoku[i][x] for i in range(SIZE)] and v not in [sudoku[i][j] for i in range(y//4*4, y//4*4+4) for j in range(x//4*4, x//4*4+4)]]
+
+def search():
+    def find_min():
+        #True의 개수가 가장 적은 열 찾기
+        
+
+    find_min()
 
 SIZE = 16
 sudoku = [*map(lambda x:[*map(lambda y:ord(y)-65,[*str.strip(x)])],[*open(0)])]
